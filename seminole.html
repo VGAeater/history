@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: white;
+	color: #444;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.5vh;
+	line-height: 4vh;
+}
+.main {
+	width: clamp( 40vw, 90vh, 100% - 4vh );
+	padding: 2vh;
+	margin-left: calc( ( 100% - clamp( 40vw, 90vh, 100% - 4vh ) ) / 2 - 2vh );
+	padding-top: 10vh;
+}
+.bar {
+	width: 100%;
+	padding-left: calc( ( 100% - clamp( 40vw, 90vh, 100% - 4vh ) ) / 2 - 2vh );
+	position: fixed;
+	background-color: #eee;
+	font-size: 0px;
+}
+.bar-item {
+	display: table-cell;
+	font-size: 2.5vh;
+	padding: 1.5vh;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	transition-duration: 0.25s;
+	border-radius: 2vh;
+	color: inherit;
+	text-decoration: none;
+}
+.bar-item:hover {
+	background-color: #ccc;
+}
+.section {
+	margin-bottom: 3vh;
+}
+#hamburger {
+	height: 4vh;
+	width: 4vh;
+	fill: #444;
+}
+#burgermenu {
+	display: none;
+}
+#burger:hover #burgermenu {
+	display: block;
+}
+.drop-item {
+	display: block;
+}
+.ref-div {
+	position: relative;
+	left: 0px; 
+	top: -10vh;
+}
+		</style>
+	</head>
+	<body>
+		<div class="bar">
+			<div id="burger">
+				<svg class="bar-item" viewBox="0 0 100 80" id="hamburger">
+					<rect width="100" height="20" rx="10"></rect>
+					<rect y="30" width="100" height="20" rx="10"></rect>
+					<rect y="60" width="100" height="20" rx="10"></rect>
+				</svg>
+				<div id="burgermenu">
+					<a class="bar-item drop-item" href="#overview">Overview</a>
+					<a class="bar-item drop-item" href="#first">First War</a>
+					<a class="bar-item drop-item" href="#second">Second War</a>
+					<a class="bar-item drop-item" href="#third">Third War</a>
+				</div>
+			</div>
+			<div id="normalmenu">
+				<a class="bar-item" href="#overview">Overview</a>
+				<a class="bar-item" href="#first">First War</a>
+				<a class="bar-item" href="#second">Second War</a>
+				<a class="bar-item" href="#third">Third War</a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="ref-div" id="overview"></div>
+			<div class="section">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim, lacus ac sodales pellentesque, tortor nisi lobortis diam, nec mattis arcu est molestie diam. Nunc viverra lacus a eros euismod, a efficitur odio dictum. Aliquam erat volutpat. Nam porta dolor ac dignissim tempus. Cras mollis, lacus posuere feugiat fringilla, velit neque pulvinar sapien, ut egestas ligula leo fermentum ex. Sed a sapien vestibulum, suscipit purus ut, sollicitudin lectus. Suspendisse eget ipsum nec risus pellentesque facilisis. Suspendisse sollicitudin lorem et ligula dictum, et volutpat lacus iaculis. Cras egestas nunc metus, ut pulvinar ante viverra a. Donec sed libero imperdiet diam imperdiet ornare vel maximus sapien. Fusce euismod nunc vitae ipsum venenatis, nec mollis ante lacinia. Donec luctus ac urna non imperdiet. Cras et urna at sapien consectetur tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+			</div>
+			<div class="ref-div" id="first"></div>
+			<div class="section">
+				Praesent nisl nunc, maximus a ante a, blandit mattis lacus. Nulla ornare nec eros sit amet fringilla. Aenean finibus facilisis nisl vitae tristique. Suspendisse nisi erat, laoreet in quam sed, laoreet gravida libero. Morbi nisl turpis, sodales dictum arcu non, suscipit dictum nulla. Etiam euismod sem neque, lobortis faucibus magna viverra ultrices. Nullam et consequat nibh. Donec egestas ullamcorper urna in condimentum. Praesent ornare, turpis vitae aliquam bibendum, enim ex porttitor ante, in tincidunt nunc libero in tortor. Donec ullamcorper laoreet felis ut pretium.
+			</div>
+			<div class="ref-div" id="second"></div>
+			<div class="section">
+				Donec metus est, suscipit et vestibulum sed, fermentum ut massa. Pellentesque sem dui, ultrices non turpis id, volutpat finibus elit. Aenean vestibulum pretium urna in feugiat. Integer volutpat ligula eget ligula laoreet porta sit amet at justo. Vestibulum ultricies velit ac metus molestie posuere. Donec luctus dolor leo, eu efficitur urna fringilla volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi efficitur et tortor quis porttitor. In tempus ac mauris non volutpat. In risus nulla, tincidunt mattis faucibus at, scelerisque ac odio. Nam semper bibendum mauris. Maecenas sodales efficitur dignissim. Mauris id enim iaculis, efficitur purus ac, facilisis ex. In id ante sit amet sapien efficitur malesuada. Curabitur eu euismod diam, a finibus sapien.
+			</div>
+			<div class="ref-div" id="third"></div>
+			<div class="section">
+				Suspendisse gravida sem nec lacus porta sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in nunc urna. Donec scelerisque posuere enim eu fringilla. Suspendisse mattis vulputate nisl, ut sagittis ex. Vestibulum tempor lobortis nulla ac hendrerit. Sed ornare nisi nisi, sit amet scelerisque tellus efficitur at. Praesent a malesuada enim, et pretium odio.
+			</div>
+			<div class="ref-div" id="source"></div>
+			<div class="section">
+
+			</div>
+			<script>
+window.onresize = window.onload = () => {
+	if ( window.innerHeight / window.innerWidth < 1.4 ) {
+		document.getElementById("burger").style.display = "none";
+		document.getElementById("normalmenu").style.display = "block";
+	} else {
+		document.getElementById("burger").style.display = "block";
+		document.getElementById("normalmenu").style.display = "none";
+	}
+};
+			</script>
+		</div>
+	</body>
+</html>
