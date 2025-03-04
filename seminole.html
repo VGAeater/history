@@ -49,12 +49,6 @@ body {
 	width: 4vh;
 	fill: #444;
 }
-#burgermenu {
-	display: none;
-}
-#burger:has(> #hamburger:hover) #burgermenu, #burger:has(> #burgermenu:hover) #burgermenu {
-	display: block;
-}
 .drop-item {
 	display: block;
 }
@@ -79,7 +73,7 @@ img {
 					<rect y="30" width="100" height="20" rx="10"></rect>
 					<rect y="60" width="100" height="20" rx="10"></rect>
 				</svg>
-				<div id="burgermenu">
+				<div id="burgermenu" style="display: none;">
 					<a class="bar-item drop-item" href="#overview">Overview</a>
 					<a class="bar-item drop-item" href="#first">First War</a>
 					<a class="bar-item drop-item" href="#second">Second War</a>
@@ -88,7 +82,7 @@ img {
 					<a class="bar-item drop-item" href="#significance">Significance</a>
 				</div>
 			</div>
-			<div id="normalmenu" style="display:none;">
+			<div id="normalmenu" style="display: none;">
 				<a class="bar-item" href="#overview">Overview</a>
 				<a class="bar-item" href="#first">First War</a>
 				<a class="bar-item" href="#second">Second War</a>
@@ -166,6 +160,13 @@ window.onresize = window.onload = () => {
 		document.getElementById("burger").style.display = "block";
 		document.getElementById("normalmenu").style.display = "none";
 	}
+};
+document.body.onclick = () => {
+	document.getElementById("burgermenu").style.display = "none";
+};
+document.getElementById("hamburger").onclick = e => {
+	e.stopPropagation();
+	document.getElementById("burgermenu").style.display = "block";
 };
 			</script>
 		</div>
