@@ -52,7 +52,7 @@ body {
 #burgermenu {
 	display: none;
 }
-#burger:hover #burgermenu {
+#burger:has(> #hamburger:hover) #burgermenu, #burger:has(> #burgermenu:hover) #burgermenu {
 	display: block;
 }
 .drop-item {
