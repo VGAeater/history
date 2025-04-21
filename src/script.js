@@ -12,5 +12,9 @@ document.body.onclick = () => {
 };
 document.getElementById("hamburger").onclick = e => {
 	e.stopPropagation();
-	document.getElementById("burgermenu").style.display = "block";
+	if ( document.getElementById("burgermenu").style.display == "none" ) {
+ 		document.getElementById("burgermenu").style.display = "block";
+ 	} else {
+ 		document.getElementById("burgermenu").style.display = "none";
+ 	}
 };
