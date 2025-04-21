@@ -1,0 +1,66 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: white;
+	color: #444;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.5vh;
+	line-height: 4vh;
+}
+a:link {
+	color: #0074D9;
+}
+a:visited {
+	color: #85144b;
+}
+.main {
+	width: clamp( 40vw, 90vh, 100% - 4vh );
+	padding: 2vh;
+	margin-left: calc( ( 100% - clamp( 40vw, 90vh, 100% - 4vh ) ) / 2 - 2vh );
+	padding-top: 10vh;
+}
+.bar {
+	width: 100%;
+	padding-left: calc( ( 100% - clamp( 40vw, 90vh, 100% - 4vh ) ) / 2 - 2vh );
+	position: fixed;
+	background-color: #eee;
+	font-size: 0px;
+}
+.bar-item {
+	display: table-cell;
+	font-size: 2.5vh;
+	padding: 1.5vh;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	transition-duration: 0.25s;
+	border-radius: 2vh;
+	color: inherit !important;
+	text-decoration: none;
+}
+.bar-item:hover {
+	background-color: #ccc;
+}
+.section {
+	margin-bottom: 3vh;
+}
+#hamburger {
+	height: 4vh;
+	width: 4vh;
+	fill: #444;
+}
+.drop-item {
+	display: block;
+}
+.ref-div {
+	position: relative;
+	left: 0px; 
+	top: -10vh;
+}
+img {
+	max-height: 50vh;
+	max-width: clamp( 40vw, 90vh, 100% );
+	width: auto;
+	height: auto;
+}
